@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHeaderAddTask"
+        android:layout_width="match_parent"
+        android:background="@color/teal_700"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/imageViewBackAddTask"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.1"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewTitleAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem chi tiết"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editTextTitleAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginHorizontal="@dimen/dp_40"
+        android:background="@color/white"
+        android:text="Học lập trình"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayoutHeaderAddTask"
+        android:importantForAutofill="yes"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="2000"
+        android:maxLines="4"
+        android:hint="@string/hint_input_title"
+        tools:ignore="LabelFor,TextFields" />
+
+    <EditText
+        android:id="@+id/editTextContentAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_120"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginHorizontal="@dimen/dp_40"
+        android:background="@color/white"
+        android:text="Lập trình JavaScript nâng cao \n NodeJs cơ bản"
+        app:layout_constraintTop_toBottomOf="@id/editTextTitleAddTask"
+        android:importantForAutofill="yes"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="10000"
+        android:maxLines="10"
+        android:hint="@string/hint_input_content"
+        tools:ignore="LabelFor,TextFields" />
+
+    <TextView
+        android:id="@+id/textVewLabelSelectDateTimeAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/black"
+        android:text="@string/label_select_datetime"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextContentAddTask" />
+
+    <EditText
+        android:id="@+id/editTextDateAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/dp_10"
+        android:enabled="false"
+        android:textColor="@color/black"
+        android:text="22/11/2022"
+        app:layout_constraintStart_toEndOf="@id/textVewLabelSelectDateTimeAddTask"
+        app:layout_constraintTop_toTopOf="@+id/textVewLabelSelectDateTimeAddTask"
+        app:layout_constraintBottom_toBottomOf="@+id/textVewLabelSelectDateTimeAddTask" />
+
+    <EditText
+        android:id="@+id/editTextTimeAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/dp_10"
+        android:enabled="false"
+        android:textColor="@color/black"
+        android:text="11:20"
+        app:layout_constraintStart_toEndOf="@id/editTextDateAddTask"
+        app:layout_constraintTop_toTopOf="@+id/editTextDateAddTask"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextDateAddTask" />
+
+    <CheckBox
+        android:id="@+id/checkboxRememberAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textVewLabelSelectDateTimeAddTask"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_remember_me"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/checkboxRememberAddTask"
+        app:layout_constraintBottom_toBottomOf="@+id/checkboxRememberAddTask"
+        app:layout_constraintStart_toEndOf="@+id/checkboxRememberAddTask" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:backgroundTint="@color/teal_200"
+        android:text="Lưu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxRememberAddTask"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

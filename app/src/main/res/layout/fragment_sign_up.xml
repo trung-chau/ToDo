@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewLabelSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextFirstNameSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_48"
+                android:hint="@string/hint_first_name"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelSignUp" />
+
+            <EditText
+                android:id="@+id/editTextLastNameSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:hint="@string/hint_last_name"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextFirstNameSignUp" />
+
+            <TextView
+                android:id="@+id/textViewLabelBirthDateSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_birth_day"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastNameSignUp" />
+
+            <TextView
+                android:id="@+id/textViewBirthDateSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelBirthDateSignUp"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastNameSignUp"
+                android:text="11/11/1999" />
+
+            <TextView
+                android:id="@+id/textViewLabelGenderSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelBirthDateSignUp"
+                android:text="@string/label_gender" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGenderSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_20"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="@id/textViewLabelGenderSignUp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewLabelGenderSignUp"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelGenderSignUp">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMaleSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_male"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemaleSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_female"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextEmailSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:hint="@string/hint_email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelGenderSignUp" />
+
+            <EditText
+                android:id="@+id/editTextPasswordSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:hint="@string/hint_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignUp"
+                tools:ignore="TextFields" />
+
+            <EditText
+                android:id="@+id/editTextEnterPasswordSignUp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:hint="@string/hint_enter_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignUp"
+                tools:ignore="TextFields" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonConfirmSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@android:color/holo_green_dark"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/textViewCancelSignUp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEnterPasswordSignUp" />
+
+            <TextView
+                android:id="@+id/textViewCancelSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_40"
+                android:text="@string/text_cancel_sign_up"
+                android:drawableStart="@drawable/ic_baseline_error_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonConfirmSignUp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

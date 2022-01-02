@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHeaderProfileUser"
+        android:layout_width="match_parent"
+        android:background="@color/teal_700"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/textViewTitleProfileUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thay đổi thông tin"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutHeaderProfileUser">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewViewAvtProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewChangeInformation"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableEnd="@drawable/ic_baseline_edit_24"
+                android:text="@string/text_change_information"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewViewAvtProfile"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:id="@+id/textViewLabelFirstNameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/hint_first_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewChangeInformation" />
+
+            <EditText
+                android:id="@+id/editTextFirstNameProfile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:enabled="true"
+                android:hint="@string/hint_first_name"
+                android:text="Nguyễn"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelFirstNameProfile" />
+
+            <TextView
+                android:id="@+id/textViewLabelLastNameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_last_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextFirstNameProfile" />
+
+            <EditText
+                android:id="@+id/editTextLastNameProfile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:enabled="true"
+                android:hint="@string/hint_last_name"
+                android:text="Nam"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelLastNameProfile" />
+
+            <TextView
+                android:id="@+id/textViewLabelBirthDateProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_birth_day"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastNameProfile" />
+
+            <TextView
+                android:id="@+id/textViewBirthDateProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelBirthDateProfile"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastNameProfile"
+                tools:text="11/11/1999" />
+
+            <TextView
+                android:id="@+id/textViewLabelGenderProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_gender"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelBirthDateProfile" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGenderSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_20"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/textViewLabelGenderProfile"
+                app:layout_constraintStart_toEndOf="@+id/textViewLabelGenderProfile"
+                app:layout_constraintTop_toTopOf="@id/textViewLabelGenderProfile">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_male" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_female" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewLabelEmailProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/label_email"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelGenderProfile" />
+
+            <EditText
+                android:id="@+id/editTextEmailProfile"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:enabled="false"
+                android:hint="@string/hint_email"
+                android:text="namnguye@gmail.com"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelEmailProfile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonChangePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/teal_700"
+                android:text="@string/text_confirm_change_infor"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmailProfile" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonSignOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_48"
+                android:background="@color/teal_700"
+                android:text="@string/text_cancel_change_infor"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonChangePassword" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
